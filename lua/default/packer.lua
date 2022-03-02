@@ -23,5 +23,6 @@ end
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
+  use "windwp/nvim-autopairs"
 
 end)
