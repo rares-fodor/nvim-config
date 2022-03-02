@@ -26,5 +26,6 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "windwp/nvim-autopairs"
   use "ggandor/lightspeed.nvim"
+  use "folke/trouble.nvim"
 
 end)
