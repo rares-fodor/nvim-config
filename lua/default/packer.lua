@@ -32,7 +32,12 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-cmdline"
-
+  use "nvim-telescope/telescope.nvim"
+  use { "nvim-telescope/telescope-fzf-native.nvim" , run = "make" }
+  use "nvim-lua/plenary.nvim"
+  use "BurntSushi/ripgrep"
+  use "akinsho/bufferline.nvim"
+  use "nvim-lualine/lualine.nvim"
 
   -- THEMES
   use "sainnhe/sonokai"
