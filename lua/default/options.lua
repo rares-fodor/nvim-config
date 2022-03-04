@@ -15,7 +15,8 @@ local options = {
 	numberwidth = 3,
 	signcolumn = "yes",
 	scrolloff = 6,
-	guifont = "monospace:h16",
+    termguicolors = true,	
+    guifont = "monospace:h16",
 }
 
 for k, v in pairs(options) do
