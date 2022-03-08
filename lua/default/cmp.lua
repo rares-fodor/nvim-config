@@ -3,7 +3,6 @@ if not ok then
     return
 end
 
-
 local cmp_kinds = {
   Text = '  ',
   Method = '  ',
@@ -68,7 +67,7 @@ cmp.setup {
         end,
     },
     sources = cmp.config.sources {
-        { name = 'nvim-lsp' },
+        { name = 'nvim_lsp' },
         { name = 'buffer' },
     },
 }
