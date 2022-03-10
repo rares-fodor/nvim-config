@@ -4,6 +4,7 @@ if not ok then
 end
 
 trouble.setup {
+    icons = false,
     position = "bottom",
     height = 10,
     width = 50,

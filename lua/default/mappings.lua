@@ -5,13 +5,13 @@ map('n', '<SPACE>', '<leader>', {noremap = false})
 -- Esc rebind
 map('i', 'jk', '<ESC>', {noremap = true})
 
--- Toggle nvimtree
-map('n', '<C-e>', '<CMD> NvimTreeToggle<CR>', {noremap = true})
-
 -- Telescope
 map('n', '<leader>ff', '<CMD>Telescope find_files <CR>', {noremap = true})
 map('n', '<leader>fg', '<CMD>Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>fb', '<CMD>Telescope buffers<CR>', {noremap = true})
+
+-- Diagnostics
+map('n', '<C-d>', '<CMD>TroubleToggle<CR>', {noremap = true})
 
 -- Select all
 map('n', '<C-a>', 'ggVG', {noremap = true})
@@ -19,14 +19,8 @@ map('n', '<C-a>', 'ggVG', {noremap = true})
 -- Remap window controls
 map('n', '<leader>w', '<C-w>', {noremap = true})
 
--- Save buffer
-map('n', '<C-s>', ':w <CR>', {noremap = true})
-map('n', '<leader>bs', ':w <CR>', {noremap = true})
-
 -- Kill buffer
 map('n', '<leader>bk', ':bd! <CR>', {noremap = true})
--- Kill all buffers return to greeter 
-map('n', '<leader>wq', '<cmd> wa <bar> %bd! | Alpha <CR> <cmd> bd# <CR>', {noremap = true})
 
 -- Cycle buffers
 map('n', '<TAB>', ':BufferLineCycleNext <CR>', {noremap = true, silent = true})
