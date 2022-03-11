@@ -11,7 +11,7 @@ map('n', '<leader>fg', '<CMD>Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>fb', '<CMD>Telescope buffers<CR>', {noremap = true})
 
 -- Diagnostics
-map('n', '<C-d>', '<CMD>TroubleToggle<CR>', {noremap = true})
+map('n', '<C-e>', '<CMD>TroubleToggle<CR>', {noremap = true})
 
 -- Select all
 map('n', '<C-a>', 'ggVG', {noremap = true})

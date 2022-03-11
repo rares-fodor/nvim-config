@@ -16,7 +16,7 @@ local options = {
 	signcolumn = "yes",
 	scrolloff = 6,
     termguicolors = true,	
-    guifont = "monospace:h16",
+    guifont = "CaskaydiaCoveNerdFontCompleteM Nerd Font:h12",
 }
 
 for k, v in pairs(options) do
