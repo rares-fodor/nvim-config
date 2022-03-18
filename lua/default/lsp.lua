@@ -56,11 +56,11 @@ end
 vim.diagnostic.config(
     {
         virtual_text = false,
+	underline = false,
         signs = {
             active = signs,
         },
         update_in_insert = false,
-        underline = true,
         severity_sort = true,
         float = {
             focusable = false,

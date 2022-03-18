@@ -6,7 +6,7 @@ let g:sonokai_style = 'atlantis'
 
 vim.cmd [[
 try
-  colorscheme sonokai 
+  colorscheme moonfly 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
