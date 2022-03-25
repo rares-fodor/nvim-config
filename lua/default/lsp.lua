@@ -77,7 +77,7 @@ vim.diagnostic.config(
 local servers = {
     'ccls',
     'rust_analyzer',
-    'pyright',
+    'pylsp',
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
