@@ -4,7 +4,7 @@ if not ok then
 end
 
 ts.setup {
-    ensure_installed = "maintained",
+    ensure_installed = "all",
     sync_install = false,
     ignore_install = { },
     highlight = {

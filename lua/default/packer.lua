@@ -42,5 +42,7 @@ return packer.startup(function(use)
   -- THEMES
   use "sainnhe/sonokai"
   use "bluz71/vim-moonfly-colors"
+  use "NLKNguyen/papercolor-theme"
+  use "ayu-theme/ayu-vim"
 
 end)
