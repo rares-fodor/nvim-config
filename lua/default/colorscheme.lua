@@ -7,7 +7,7 @@ let g:ayucolor='dark'
 
 vim.cmd [[
 try
-  colorscheme ayu
+  colorscheme dawnfox 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

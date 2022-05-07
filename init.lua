@@ -13,4 +13,5 @@ require((user) .. '.bufferline')
 require((user) .. '.autopairs')
 require((user) .. '.statusline')
 require((user) .. '.colorscheme')
+require((user) .. '.lsp_signature')
 

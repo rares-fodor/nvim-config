@@ -78,6 +78,7 @@ local servers = {
     'ccls',
     'rust_analyzer',
     'pylsp',
+    'tsserver'
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and

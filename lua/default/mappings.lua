@@ -4,6 +4,9 @@ local map = vim.api.nvim_set_keymap
 map('n', '<SPACE>', '<leader>', {noremap = false})
 -- Esc rebind
 map('i', 'jk', '<ESC>', {noremap = true})
+map('n', '<C-p>', '<C-i>', {noremap = true})
+
+map('n', '<leader>l', ':ls<CR> :b <SPACE>', {noremap = true})
 
 -- Telescope
 map('n', '<leader>ff', '<CMD>Telescope find_files <CR>', {noremap = true})

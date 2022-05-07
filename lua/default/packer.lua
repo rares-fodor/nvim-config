@@ -38,11 +38,14 @@ return packer.startup(function(use)
   use "BurntSushi/ripgrep"
   use "akinsho/bufferline.nvim"
   use "nvim-lualine/lualine.nvim"
+  use "ray-x/lsp_signature.nvim"
 
   -- THEMES
   use "sainnhe/sonokai"
   use "bluz71/vim-moonfly-colors"
   use "NLKNguyen/papercolor-theme"
   use "ayu-theme/ayu-vim"
+  use "EdenEast/nightfox.nvim"
+  use "rebelot/kanagawa.nvim"
 
 end)
