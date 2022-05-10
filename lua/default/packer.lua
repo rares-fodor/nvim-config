@@ -40,6 +40,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "nvim-lualine/lualine.nvim"
   use "ray-x/lsp_signature.nvim"
+  use "Darazaki/indent-o-matic"
 
   -- THEMES
   use "sainnhe/sonokai"
