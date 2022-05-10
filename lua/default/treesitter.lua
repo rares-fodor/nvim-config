@@ -11,4 +11,5 @@ ts.setup {
         enable = true,
         disable =  { },
     },
+    autotag = { enable = true, },
 }
