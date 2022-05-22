@@ -26,9 +26,8 @@ map('n', '<leader>w', '<C-w>', {noremap = true})
 map('n', '<leader>bk', ':bd! <CR>', {noremap = true})
 
 -- Cycle buffers
-map('n', '<TAB>', ':BufferLineCycleNext <CR>', {noremap = true, silent = true})
-map('n', '<A-]>', ':BufferLineCycleNext <CR>', {noremap = true, silent = true})
-map('n', '<A-[>', ':BufferLineCyclePrev <CR>', {noremap = true, silent = true})
+map('n', '<TAB>', ':bnext <CR>', {noremap = true, silent = true})
+map('n', '<S-TAB>', ':bprev <CR>', {noremap = true, silent = true})
 
 -- Alt commands to move text selections around
 map('v', '<A-k>', ":m '<-2<CR>gv", {noremap = true, silent = true})

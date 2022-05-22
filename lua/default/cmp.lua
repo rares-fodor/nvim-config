@@ -60,7 +60,7 @@ cmp.setup {
        ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
     },
     formatting = {
-        fields = { "kind", "abbr" },
+        fields = { "abbr" },
         format = function(_, vim_item)
             vim_item.kind = cmp_kinds[vim_item.kind] or ""
             return vim_item

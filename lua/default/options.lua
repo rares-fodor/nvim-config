@@ -5,7 +5,6 @@ local options = {
 	smartcase = true,
 	hlsearch = true,
 	undofile = true,
-	expandtab = true,
 	tabstop = 8,
 	shiftwidth = 8,
 	splitbelow = true,
