@@ -20,7 +20,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.documentHighlight then
     vim.api.nvim_exec(
       [[
       augroup lsp_document_highlight
@@ -43,10 +43,10 @@ local on_attach = function(client, bufnr)
 end
 
 local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
+    { name = "DiagnosticSignError", text = "X" },
+    { name = "DiagnosticSignWarn", text = "!" },
+    { name = "DiagnosticSignHint", text = "?" },
+    { name = "DiagnosticSignInfo", text = "?" },
 }
 
 for _, sign in ipairs(signs) do
@@ -75,7 +75,7 @@ vim.diagnostic.config(
 
 
 local servers = {
-    'ccls',
+    'clangd',
     'rust_analyzer',
     'pylsp',
     'tsserver'
