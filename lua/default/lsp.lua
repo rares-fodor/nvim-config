@@ -78,7 +78,8 @@ local servers = {
     'clangd',
     'rust_analyzer',
     'pylsp',
-    'tsserver'
+    'tsserver',
+    'eslint',
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
