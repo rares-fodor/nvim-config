@@ -11,8 +11,8 @@ ls.setup {
     force_beacons_into_match_width = false,
     substitute_chars = { ['\r'] = '¬', },
     special_keys = {
-      next_match_group = '<space>',
-      prev_match_group = '<tab>',
+        next_match_group = '<space>',
+        prev_match_group = '<tab>',
     },
     limit_ft_matches = 4,
     repeat_ft_with_target_char = false,

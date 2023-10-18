@@ -80,6 +80,7 @@ local servers = {
     'pylsp',
     'tsserver',
     'eslint',
+    'cmake'
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
