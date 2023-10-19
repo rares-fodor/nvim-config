@@ -27,6 +27,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
   use "ggandor/leap.nvim"
+  use "akinsho/toggleterm.nvim"
   use "folke/trouble.nvim"
   use "nvim-treesitter/nvim-treesitter"
   use "hrsh7th/nvim-cmp"

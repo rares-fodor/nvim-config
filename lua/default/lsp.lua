@@ -19,19 +19,19 @@ local function lsp_mappings(bufnr)
 end
 
 local function lsp_highlight_document(client)
-  -- Set autocommands conditional on server_capabilities
-  if client.server_capabilities.documentHighlight then
-    vim.api.nvim_exec(
-      [[
-      augroup lsp_document_highlight
+    -- Set autocommands conditional on server_capabilities
+    if client.server_capabilities.documentHighlight then
+        vim.api.nvim_exec(
+        [[
+        augroup lsp_document_highlight
         autocmd! * <buffer>
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
-      false
-    )
-  end
+        augroup END
+        ]],
+        false
+        )
+    end
 end
 
 
@@ -54,23 +54,23 @@ for _, sign in ipairs(signs) do
 end
 
 vim.diagnostic.config(
-    {
-        virtual_text = false,
-	underline = false,
-        signs = {
-            active = signs,
-        },
-        update_in_insert = false,
-        severity_sort = true,
-        float = {
-            focusable = false,
-            style = "minimal",
-            border = "rounded",
-            source = "always",
-            header = "",
-            prefix = "",
-        },
-    }
+{
+    virtual_text = false,
+    underline = false,
+    signs = {
+        active = signs,
+    },
+    update_in_insert = false,
+    severity_sort = true,
+    float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+    },
+}
 )
 
 
@@ -86,11 +86,11 @@ local servers = {
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
+    require('lspconfig')[lsp].setup {
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
+        }
     }
-  }
 end
 
