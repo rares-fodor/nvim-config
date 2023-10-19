@@ -6,6 +6,7 @@ map('n', '<SPACE>', '<leader>', {noremap = false})
 map('i', 'jk', '<ESC>', {noremap = true})
 map('n', '<C-p>', '<C-i>', {noremap = true})
 
+-- Go to buffer
 map('n', '<leader>l', ':ls<CR> :b <SPACE>', {noremap = true})
 
 -- Telescope
@@ -42,8 +43,4 @@ map('n', '<A-l>', ">>", {noremap = true, silent = true})
 -- Terminal mode to normal mode with escape
 map('t', '<ESC>', '<C-\\><C-n>', {noremap = true})
 map('t', 'jk', '<C-\\><C-n>', {noremap = true})
-
--- Spawn terminals
-map('n', '<SPACE>tl', "<cmd> vsplit +term | startinsert <CR>", {noremap = true, silent = true})
-map('n', '<SPACE>tj', "<cmd> split +term | startinsert <CR>", {noremap = true, silent = true})
 
