@@ -7,8 +7,17 @@ telescope.setup {
     defaults = {
         file_ingore_patterns = {
         },
+        mappings = {
+            i = {
+                ["<C-j>"] = "move_selection_next",
+                ["<C-k>"] = "move_selection_previous",
+            },
+        },
     },
     pickers = {
+        colorscheme = {
+            enable_preview = true,
+        },
     },
     extensions = {
         fzf = {

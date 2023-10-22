@@ -13,6 +13,7 @@ map('n', '<leader>l', ':ls<CR> :b <SPACE>', {noremap = true})
 map('n', '<leader>ff', '<CMD>Telescope find_files <CR>', {noremap = true})
 map('n', '<leader>fg', '<CMD>Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>fb', '<CMD>Telescope buffers<CR>', {noremap = true})
+map('n', '<leader>fc', '<CMD>Telescope colorscheme<CR>', {noremap = true})
 
 -- Diagnostics
 map('n', '<C-e>', '<CMD>TroubleToggle<CR>', {noremap = true})

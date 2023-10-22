@@ -42,6 +42,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "ray-x/lsp_signature.nvim"
   use "Darazaki/indent-o-matic"
+  use "lukas-reineke/cmp-under-comparator"
 
   -- THEMES
   use "sainnhe/sonokai"
