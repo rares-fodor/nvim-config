@@ -6,6 +6,9 @@ map('n', '<SPACE>', '<leader>', {noremap = false})
 map('i', 'jk', '<ESC>', {noremap = true})
 map('n', '<C-p>', '<C-i>', {noremap = true})
 
+-- Search with <leader>s
+map('n', '<leader>s', '/', {noremap = true})
+
 -- Go to buffer
 map('n', '<leader>l', ':ls<CR> :b <SPACE>', {noremap = true})
 
@@ -14,9 +17,16 @@ map('n', '<leader>ff', '<CMD>Telescope find_files <CR>', {noremap = true})
 map('n', '<leader>fg', '<CMD>Telescope live_grep<CR>', {noremap = true})
 map('n', '<leader>fb', '<CMD>Telescope buffers<CR>', {noremap = true})
 map('n', '<leader>fc', '<CMD>Telescope colorscheme<CR>', {noremap = true})
+map('n', '<leader>fs', '<CMD>Telescope symbols<CR>', {noremap = true})
 
--- Diagnostics
-map('n', '<C-e>', '<CMD>TroubleToggle<CR>', {noremap = true})
+
+map('n', '+', '<C-p>', {noremap = true})
+map('n', '_', '<C-o>', {noremap = true})
+
+
+-- Trouble
+map('n', '<C-e>', '<CMD>Trouble diagnostics toggle focus=true filter.buf=0<CR>', {noremap = true})
+map('n', 'gr', '<CMD>Trouble lsp_references toggle focus=true<CR>', {noremap = true})
 
 -- Select all
 map('n', '<C-a>', 'ggVG', {noremap = true})

@@ -10,12 +10,11 @@ local function lsp_mappings(bufnr)
     bufmap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
     bufmap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
     bufmap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-    bufmap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+    --bufmap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
     bufmap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     bufmap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     bufmap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    bufmap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    bufmap(bufnr, 'n', '<space>lf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts) 
+    bufmap(bufnr, 'n', '<space>lf', '<cmd>lua vim.lsp.buf.format()<CR>', opts) 
 end
 
 local function lsp_highlight_document(client)
@@ -40,6 +39,16 @@ end
 local on_attach = function(client, bufnr)
     lsp_mappings(bufnr)
     lsp_highlight_document(client)
+
+    -- Enable document formatting if the server supports it
+    if client.server_capabilities.document_formatting then
+        vim.api.nvim_exec([[
+          augroup Format
+            autocmd!
+            autocmd BufWritePre *.cpp,*.h,*.c,*.hpp,*.cxx,*.hxx,*.cc,*.hh,*.mm,*.m,*.cu lua vim.lsp.buf.formatting_sync(nil, 1000)
+          augroup END
+        ]], false)
+    end
 end
 
 local signs = {
@@ -75,18 +84,29 @@ vim.diagnostic.config(
 
 
 local servers = {
-    'clangd',
+    {
+        name = 'clangd',
+        cmd = { 'clangd', '--clang-tidy' },
+    },
     'rust_analyzer',
     'pylsp',
     'tsserver',
-    'eslint',
-    'cmake'
+    'tailwindcss',
+    'svelte',
+    'cmake',
+    'volar',
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 for _, lsp in pairs(servers) do
-    require('lspconfig')[lsp].setup {
+    local serverConfig = lsp
+    if type(lsp) == 'string' then
+        serverConfig = { name = lsp }
+    end
+
+    require('lspconfig')[serverConfig.name].setup {
+        cmd = serverConfig.cmd,
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150,

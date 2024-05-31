@@ -25,6 +25,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
   use "neovim/nvim-lspconfig"
   use "windwp/nvim-autopairs"
+  use "kylechui/nvim-surround"
   use "windwp/nvim-ts-autotag"
   use "ggandor/leap.nvim"
   use "akinsho/toggleterm.nvim"
@@ -43,13 +44,16 @@ return packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "Darazaki/indent-o-matic"
   use "lukas-reineke/cmp-under-comparator"
+  use "numToStr/Comment.nvim"
 
   -- THEMES
   use "sainnhe/sonokai"
+  use "ellisonleao/gruvbox.nvim"
   use "bluz71/vim-moonfly-colors"
   use "NLKNguyen/papercolor-theme"
   use "ayu-theme/ayu-vim"
   use "EdenEast/nightfox.nvim"
   use "rebelot/kanagawa.nvim"
+  use "kepano/flexoki"
 
 end)

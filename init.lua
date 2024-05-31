@@ -15,3 +15,5 @@ require((user) .. '.colorscheme')
 require((user) .. '.lsp_signature')
 require((user) .. '.indents')
 require((user) .. '.toggleterm')
+require((user) .. '.comment')
+
